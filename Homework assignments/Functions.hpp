@@ -9,6 +9,8 @@
 #define Functions_hpp
 
 #include <iostream>
+#include <vector>
+#include <string>
 
 void replaceSubString(std::string& str, const std::string& from, const std::string& to);
 bool isLeapYear(int year);

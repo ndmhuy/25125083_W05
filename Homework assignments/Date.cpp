@@ -11,6 +11,8 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <string>
+#include <ctime>
 
 void inputDate(Date& d)
 {
@@ -134,7 +136,7 @@ Date findYesterday(Date d)
 {
     if (d.day > 1) --d.day;
     else {
-        if (d.month < 1) --d.month;
+        if (d.month > 1) --d.month;
         else {
             d.month = 12;
             --d.year;

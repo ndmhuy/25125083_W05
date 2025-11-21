@@ -7,6 +7,8 @@
 #include "Functions.hpp"
 
 #include <iostream>
+#include <vector>
+#include <string>
 
 void P401();
 void P402();
@@ -122,7 +124,7 @@ void P401()
             case '8':
                 d2 = findYesterday(d1);
                 std::cout << "Yesterday was: ";
-                outputDate(d1);
+                outputDate(d2);
                 break;
             case '9':
                 std::cout << "Enter k: ";
@@ -167,7 +169,6 @@ void P401()
 // === P402 (Student) Menu ===
 void P402()
 {
-    // Khai báo các biến bạn sẽ dùng
     Student s1, s2;
     int compare = 0;
     std::string inFilename = "student_input.txt";
@@ -193,10 +194,6 @@ void P402()
 
         std::cin >> choice;
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        
-        // (Lưu ý: Case 1 sẽ gọi hàm inputStudent
-        // Hàm inputStudent PHẢI tự xử lý các lệnh cin.ignore
-        // bên trong nó, đặc biệt là giữa cin >> gpa và getline)
 
         switch (choice) {
             case '1':

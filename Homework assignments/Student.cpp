@@ -99,9 +99,10 @@ bool outputStudentWithAgeToFile(const Student& s, const std::string& filename)
     fout << "Address: " << s.address << '\n';
     fout << "Date of birth: " << getFormattedDate(s.dob, "dd/MM/yyyy") << '\n';
     
+    std::string yearManip = (age.year > 1) ? " years " : " year ";
     std::string monthManip = (age.month > 1) ? " months " : " month ";
-    std::string ageManip = (age.day > 1) ? " days " : " day ";
-    fout << "Age: " << age.year << " year " << age.month << monthManip << age.day << ageManip << '\n';
+    std::string ageManip = (age.day > 1) ? " days " : " day";
+    fout << "Age: " << age.year << yearManip << age.month << monthManip << age.day << ageManip << '\n';
     
     fout.close();
     return true;

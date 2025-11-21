@@ -9,6 +9,9 @@
 
 #include <iostream>
 #include <sstream>
+#include <string>
+#include <vector>
+#include <climits>
 
 void replaceSubString(std::string& str, const std::string& from, const std::string& to)
 {

@@ -9,6 +9,7 @@
 #define Date_hpp
 
 #include <iostream>
+#include <string>
 
 struct Date
 {
